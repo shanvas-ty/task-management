@@ -3,7 +3,6 @@ Task Management App Setup Guide (React + FastAPI + MongoDB Cloud)
 
 This guide explains how to run the full-stack Task Management app using React, FastAPI, and MongoDB Atlas (cloud database).
 
-
 # ✅ Task Management App
 
 A full-stack Task Management application built using:
@@ -77,7 +76,6 @@ cd task-management
    Ensure your database credentials and IP whitelist settings are correct on MongoDB Atlas.
 
 5. Run FastAPI server:
-
    uvicorn main:app --reload
        or
    uvicorn main:app --reload --port 8000 --host 0.0.0.0
@@ -85,8 +83,8 @@ cd task-management
    Visit Swagger docs: http://localhost:8000/docs
 
 
-Frontend Setup (React):
-------------------------
+### 3.Frontend Setup (React):
+-----------------------------
 1. Navigate to frontend:
    cd ../frontend            
 
@@ -114,9 +112,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-
-
 
 Backend Requirements (requirements.txt):
 ----------------------------------------
