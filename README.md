@@ -10,7 +10,6 @@ The application features a clean and responsive user interface, seamless real-ti
 
 full-stack Task Management app using React, FastAPI, and MongoDB Atlas (cloud database).
 
-
 # ✅ Task Management App
 
 A full-stack Task Management application built using:
@@ -26,9 +25,11 @@ A full-stack Task Management application built using:
 - Store tasks in the cloud using MongoDB Atlas
 - Clean UI and responsive design
 - RESTful API backend with FastAPI
-
+ 
 Prerequisites:
 --------------
 - Node.js and npm
 - Python 3.8+
 - MongoDB Atlas account
+
+Read TaskManagementApp_SetupGuide.txt for project setup informations
