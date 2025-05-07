@@ -1,0 +1,124 @@
+/* Layout styles */
+.layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure it takes at least the full viewport height */
+    background-color: #f9f9f9;
+    padding: 20px; /* Add padding to avoid edges touching the screen */
+}
+
+.container {
+    width: 100%;
+    max-width: 400px; /* Limit the width to 400px for smaller screens */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styles */
+.title {
+    text-align: center;
+}
+
+.title-text {
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+/* Form styles */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Input styles */
+.input_group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.input_group.border-error {
+    border-color: #e74c3c;
+}
+
+.input_text {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+/* Button styles */
+.input-button {
+    display: flex;
+    justify-content: center;
+}
+
+.button, .button_custom {
+    width: 100%;
+    padding: 12px; /* Reduce button padding for smaller screens */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.button_custom {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.button:hover, .button_custom:hover {
+    opacity: 0.8;
+}
+
+/* Text and link styles */
+.text {
+    text-align: center;
+    color: #888;
+}
+
+.link {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Make the container width flexible */
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .title-text {
+        font-size: 1.5rem;
+    }
+
+    .input_text {
+        padding: 8px; /* Adjust input padding for mobile */
+    }
+
+    .button, .button_custom {
+        padding: 10px; /* Adjust button padding for mobile */
+    }
+}

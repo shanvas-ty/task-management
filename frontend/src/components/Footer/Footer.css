@@ -1,0 +1,127 @@
+.footer-container {
+    background-color: black;
+    color: white;
+    padding: 40px 20px; /* Add padding for spacing */
+}
+
+/* Add PC view styling for screens wider than 1380px */
+@media (min-width: 1380px) {
+    .footer-container {
+        width: 1380px;
+        margin: 0 auto; /* Center the footer */
+        padding: 40px 0; /* Adjust padding for a balanced layout */
+    }
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-between; /* Space between sections */
+}
+
+.footer-links,
+.footer-contact,
+.footer-logo {
+    flex: 1; /* Each section takes equal space */
+    min-width: 200px; /* Prevent sections from being too small */
+    margin: 10px; /* Space between sections */
+}
+
+.footer-heading {
+    font-size: 1.5rem;
+    margin-bottom: 20px; /* Space below heading */
+}
+
+.footer-links-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.footer-links-list li {
+    margin: 10px 0; /* Space between links */
+}
+
+.footer-links-list a {
+    color: gray; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer-links-list a:hover {
+    color: white; /* Change color on hover */
+}
+
+.footer-contact-heading {
+    font-size: 1.2rem;
+    margin-bottom: 10px; /* Space below heading */
+}
+
+.footer-address {
+    margin-bottom: 5px; /* Reduced space below address */
+}
+
+.footer-contacts {
+    display: flex;
+    flex-direction: column; /* Arrange contacts vertically */
+    align-items: center; /* Align items to the left */
+}
+
+.footer-contacts div {
+    display: flex;
+    align-items: center;
+    margin: 2px 0; /* Reduced space between contact items */
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.footer-logo-image {
+    width: 80px; /* Adjust logo size as needed */
+    margin-bottom: 10px; /* Space below logo */
+}
+
+.footer-shop-name {
+    font-size: 1.5rem;
+    margin-bottom: 10px; /* Space below shop name */
+}
+
+.footer-social-media {
+    display: flex;
+    gap: 10px; /* Space between icons */
+}
+
+.social-icon {
+    color: white; /* Icon color */
+    cursor: pointer; /* Add a pointer cursor for interaction */
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center; /* Center content */
+    }
+
+    .footer-links,
+    .footer-contact,
+    .footer-logo {
+        flex: 1 0 100%; /* Allow sections to take full width */
+        margin: 10px 0; /* Space between sections */
+        text-align: center; /* Center text in sections */
+    }
+
+    .footer-heading,
+    .footer-contact-heading {
+        font-size: 1.25rem; /* Slightly smaller heading */
+    }
+
+    .footer-shop-name {
+        font-size: 1.2rem; /* Slightly smaller shop name */
+    }
+
+    .footer-social-media {
+        margin-top: 10px; /* Space above social icons */
+    }
+}

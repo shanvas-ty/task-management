@@ -1,0 +1,41 @@
+
+
+/* Default navbar styling */
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    padding: 16px;
+    box-shadow: 0 1px 3px -2px black;
+}
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px;
+  box-shadow: 0 1px 3px -2px black;
+}
+
+/* Add PC view styling for screens wider than 1380px */
+@media (min-width: 1380px) {
+  .navbar {
+      width: 1380px;
+      margin: 0 auto; /* Center the navbar */
+  }
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-logo img {
+  width: 70px;
+}
+
+.nav-logo h1 {
+  color: #171717;
+  font-size: 38px;
+  font-weight: 600;
+}
+

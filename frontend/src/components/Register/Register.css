@@ -1,0 +1,159 @@
+/* Layout styles */
+.layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styles */
+.title {
+    text-align: center;
+}
+
+.title-text {
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+/* Form styles */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Input styles */
+.input_group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.input_group.border-error {
+    border-color: #e74c3c;
+}
+
+.input_text {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.input_text::placeholder {
+    color: #888;
+}
+
+/* Button styles */
+.input-button {
+    display: flex;
+    justify-content: center;
+}
+
+.button, .button_custom {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button_custom {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.button:hover, .button_custom:hover {
+    opacity: 0.8;
+}
+
+/* Text and link styles */
+.text {
+    text-align: center;
+    color: #888;
+}
+
+.link {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+/* Error text styles */
+.error-text {
+    color: #e74c3c;
+    font-size: 0.875rem;
+    padding-top: 5px;
+}
+
+/* Styles for screens 576px and above (PC and tablets) */
+@media (min-width: 576px) {
+    .container {
+        max-width: 400px; /* Ensure a good layout for larger screens */
+        padding: 30px;
+        gap: 30px;
+    }
+
+    .title-text {
+        font-size: 1.8rem; /* Larger title for bigger screens */
+    }
+
+    .input_text {
+        padding: 10px;
+    }
+
+    .button, .button_custom {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
+
+/* Styles for screens 576px and below (mobile) */
+@media (max-width: 576px) {
+    .container {
+        width: 90%; /* Reduce width for mobile */
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .title-text {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .input_text {
+        padding: 8px; /* Smaller padding for inputs on mobile */
+    }
+
+    .button, .button_custom {
+        padding: 10px;
+        font-size: 0.9rem; /* Slightly reduce button text size */
+    }
+}
