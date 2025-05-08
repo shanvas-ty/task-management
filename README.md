@@ -19,10 +19,12 @@ A full-stack Task Management application built using:
 - ☁️ MongoDB Atlas (Cloud Database)  – Cloud-based NoSQL database for storing users and tasks
 
 ## 🚀 Features
+
 🔐 User Authentication
-  -User registration and login functionality
-  -JWT-based authentication using HttpOnly cookies
-  -Protected routes and user-specific task access
+- User registration and login functionality
+- JWT-based authentication using HttpOnly cookies
+- Protected routes and user-specific task access
+  
 📋 Task Management
 - Add, edit, and delete tasks
 - Mark tasks as complete or pending
