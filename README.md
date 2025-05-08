@@ -1,4 +1,4 @@
-🎯 Project Title: Task Management App (React + FastAPI + MongoDB Atlas cloud database)
+🎯 Project Title: Task Management App (React + FastAPI + MongoDB Atlas cloud database, enhanced with secure JWT authentication using HttpOnly cookies)
 
 📌 Description:
 
