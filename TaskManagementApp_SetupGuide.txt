@@ -1,7 +1,7 @@
 Task Management App Setup Guide (React + FastAPI + MongoDB Cloud)
 ==================================================================
 
-This guide explains how to run the full-stack Task Management app using React, FastAPI, and MongoDB Atlas (cloud database).
+This guide explains how to run the full-stack Task Management app using React, FastAPI,  MongoDB Atlas (cloud database) and enhanced with secure JWT authentication using HttpOnly cookies.
 
 # ✅ Task Management App
 
@@ -12,24 +12,30 @@ A full-stack Task Management application built using:
 - ☁️ MongoDB Atlas (Cloud Database)
 
 ## 🚀 Features
-
+- User registration and login with JWT-based authentication
+- HttpOnly cookies for secure token storage
 - Add, edit, and delete tasks
 - Mark tasks as complete or pending
 - Store tasks in the cloud using MongoDB Atlas
 - Clean UI and responsive design
 - RESTful API backend with FastAPI
+- CORS configuration for cross-origin requests
 
 Project Structure:
 ------------------
 task-management/
 │
 ├── backend/              # FastAPI backend
-│   ├── app/              # FastAPI logic (models, routes, db)
+│   ├── app/              # FastAPI logic (models( User and Task models), routes (# API endpoints),
+                            db (# MongoDB connection), auth(#JWT auth-related code (register, login, verify))
 │   ├── main.py           # Entry point for backend
 │   └── requirements.txt  # Python dependencies
 │
 ├── frontend/             # React frontend
 │   ├── src/
+│   │ ├── components/ # Reusable UI components
+│   │ ├── pages/ # Login, Register, TaskList,AddTask, Modify Task etc.
+│   │ └── context/ # AuthContext for managing user state, Task state
 │   ├── public/
 │   ├── package.json
 │   └── package-lock.json
@@ -52,7 +58,7 @@ git clone https://github.com/shanvas-ty/task-management.git
 cd task-management
 
 
-### 2.Backend Setup (FastAPI + MongoDB Cloud):
+### 2.🛠 Backend Setup (FastAPI + JWT + MongoDB Atlas):
 ----------------------------------------
 1. Navigate to backend:
 
@@ -74,16 +80,23 @@ cd task-management
 4. Add MongoDB Atlas connection string:
    The MongoDB Atlas connection string is already hardcoded in main.py 
    Ensure your database credentials and IP whitelist settings are correct on MongoDB Atlas.
+             or
+  Use MongoDB Atlas to create a database.
+  Replace the connection URI in your main.py file:  MONGODB_URL = "your_mongodb_connection_string"
+
+🔐 JWT and Cookie Config
+JWT tokens are generated during login and sent back in HttpOnly cookies.
+These cookies are used to protect routes and verify user sessions.
 
 5. Run FastAPI server:
    uvicorn main:app --reload
-       or
+       #Or with open port binding:
    uvicorn main:app --reload --port 8000 --host 0.0.0.0
 
    Visit Swagger docs: http://localhost:8000/docs
 
 
-### 3.Frontend Setup (React):
+### 3.Frontend Setup (React + AuthContext):
 -----------------------------
 1. Navigate to frontend:
    cd ../frontend            
@@ -99,7 +112,10 @@ cd task-management
 Connect Frontend with Backend:
 ------------------------------
 Ensure React uses the FastAPI base URL for API calls:
-fetch("http://localhost:8000/tasks")
+fetch("http://localhost:8000/api/tasks", {
+  credentials: "include", // to include HttpOnly cookies
+});
+
 
 CORS Configuration in FastAPI (main.py):
 ----------------------------------------
@@ -120,7 +136,8 @@ uvicorn
 motor
 pydantic
 python-dotenv
-
+passlib[bcrypt]
+python-jose
 
 You're all set!
 ---------------
