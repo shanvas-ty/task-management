@@ -1,5 +1,5 @@
 Task Management App Setup Guide (React + FastAPI + MongoDB Cloud, enhanced with secure JWT authentication using HttpOnly cookies)
-==================================================================
+=================================================================================================================================
 
 This guide explains how to run the full-stack Task Management app using React, FastAPI,  MongoDB Atlas (cloud database) and enhanced with secure JWT authentication using HttpOnly cookies.
 
@@ -59,7 +59,7 @@ cd task-management
 
 
 ### 2.🛠 Backend Setup (FastAPI + JWT + MongoDB Atlas):
-----------------------------------------
+------------------------------------------------------
 1. Navigate to backend:
 
    cd backend
@@ -97,7 +97,7 @@ These cookies are used to protect routes and verify user sessions.
 
 
 ### 3.Frontend Setup (React + AuthContext):
------------------------------
+------------------------------------------
 1. Navigate to frontend:
    cd ../frontend            
 
