@@ -72,7 +72,7 @@ cd task-management
    pip install -r requirements.txt
 
 4. Add MongoDB Atlas connection string:
-   The MongoDB Atlas connection string is already hardcoded in main.py or app/database.py.
+   The MongoDB Atlas connection string is already hardcoded in main.py 
    Ensure your database credentials and IP whitelist settings are correct on MongoDB Atlas.
 
 5. Run FastAPI server:
